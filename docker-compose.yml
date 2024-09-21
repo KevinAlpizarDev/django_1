@@ -1,0 +1,12 @@
+
+services:
+  web:
+    image: django_app
+    container_name: django_app_build
+    build: 
+      context: ./myapp
+    environment:
+      - DJANGO_DEBUG=True
+      - DJANGO_ALLOWED_HOST=localhost
+    ports:
+      - "8000:8000"
