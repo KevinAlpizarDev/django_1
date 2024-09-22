@@ -3,10 +3,27 @@ services:
   web:
     image: django_app
     container_name: django_app_build
-    build: 
-      context: ./myapp
+    build:
+      context: ./mysite # Asegúrate de que esta ruta sea correcta
     environment:
       - DJANGO_DEBUG=True
       - DJANGO_ALLOWED_HOST=localhost
     ports:
       - "8000:8000"
+    volumes:
+      - ./mysite:/app # Asegúrate de que esta ruta sea correcta
+    command: python manage.py runserver 0.0.0.0:8000 # Iniciar el servidor Django
+
+# services:
+#   web:
+#     image: django_app
+#     container_name: django_app_build
+#     build:
+#       context: ./mysite  # Cambia esto a la carpeta correcta de tu proyecto
+#     environment:
+#       - DJANGO_DEBUG=True
+#       - DJANGO_ALLOWED_HOST=localhost
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - ./mysite:/app  # Asegúrate de que esta ruta sea correcta

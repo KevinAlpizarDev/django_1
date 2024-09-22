@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Iniciar Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/django-mysql/app/manage.py",
+            "args": [
+                "runserver",
+                "8080"
+            ],
+            "django": true,
+            "console": "integratedTerminal"
+        }
+    ]
+}
