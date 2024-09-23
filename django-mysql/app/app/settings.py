@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-b_1sxto7zz5w*#m1ghc=6+wwf*tk74q9)mo68gma(^qo$8&#=)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["localhost", "127.0.0.1", "react-container"]
 
 
 # Application definition
@@ -73,16 +73,29 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'default',
+#         'USER': 'root',
+#         'PASSWORD': 'kevinalpizar1998@PUTOamo',
+#         'HOST': 'mysql',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'default',
         'USER': 'root',
         'PASSWORD': 'kevinalpizar1998@PUTOamo',
-        'HOST': 'localhost',
+        'HOST': 'mysql',
         'PORT': '3306',
     }
 }
+
+
 
 
 

@@ -6,7 +6,7 @@ services:
       context: ./app # Asegúrate de que esta ruta sea correcta
     environment:
       - DJANGO_DEBUG=True
-      - DJANGO_ALLOWED_HOST=localhost
+      - DJANGO_ALLOWED_HOST=mysql
     ports:
       - "8000:8000"
     volumes:
@@ -22,7 +22,7 @@ services:
       - MYSQL_ROOT_PASSWORD=kevinalpizar1998@PUTOamo
       - MYSQL_DATABASE=default
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mysql_data:/data/db
       - ./mysql-init:/docker-entrypoint-initdb.d:ro
 
 volumes:
